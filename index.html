@@ -416,14 +416,8 @@
 		</a>
 </div> 
   <script>
-	  function openLinkInBrowser(url) {
-
-      if (navigator && navigator.app && navigator.app.loadUrl) {
-          navigator.app.loadUrl(url, { openExternal:true });
-      }
-      else {
-          window.open(url, '_system');
-      }
+    function openLinkInBrowser(url) {
+      window.open(url, '_system');
     }
         document.getElementById('downloadVCF').addEventListener('click', function() {
             const vcfData = `BEGIN:VCARD
@@ -465,6 +459,7 @@ END:VCARD`;
 
         document.getElementById('emailButton').addEventListener('click', function() {
             const email = 'mailto:iron-man@stark.ru'; // Update with your email
+	    window.open(externalUrl, '_blank');
             window.location.href = email;
         });
     </script>
