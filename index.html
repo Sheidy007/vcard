@@ -416,6 +416,21 @@
 		</a>
 </div> 
   <script>
+	   // Функция для проверки встроенного браузера
+        function checkEmbeddedBrowser() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Проверка User-Agent на наличие встроенных браузеров популярных приложений
+            if (/FBAN|FBAV|Instagram|WhatsApp|Telegram|Line/i.test(userAgent)) {
+                alert("Пожалуйста, откройте эту страницу в браузере по умолчанию.");
+                
+                // Можно также перенаправить пользователя на внешнюю страницу, например:
+                // window.location.href = "https://www.example.com";
+            }
+        }
+
+        // Запускаем проверку при загрузке страницы
+        window.onload = checkEmbeddedBrowser;
     function openLinkInBrowser(url) {
       window.open(url, '_system');
     }
