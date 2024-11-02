@@ -396,8 +396,35 @@
 </div>
 </td></tr>
 </tbody></table> 
+		<a rel="noopener" href="javascript:void(0)" onclick="openLinkInBrowser('mailto:anton.ionov@aton.ru')" class="detail-card">
+			<div class="icon">
+				<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g>
+						<g id="Vector">
+							<path d="M1 4.00002C1 3.26364 1.59695 2.66669 2.33333 2.66669H15.6667C16.403 2.66669 17 3.26364 17 4.00002V12.6667C17 13.4031 16.403 14 15.6667 14H2.33333C1.59695 14 1 13.4031 1 12.6667V4.00002Z" stroke="#0F0F0F" stroke-linejoin="round"></path>
+							<path d="M1.94754 3.53526C1.61139 3.22713 1.8294 2.66669 2.2854 2.66669H15.7146C16.1706 2.66669 16.3886 3.22713 16.0525 3.53526L10.3515 8.76119C9.58681 9.46211 8.41319 9.46211 7.64855 8.76119L1.94754 3.53526Z" stroke="#0F0F0F" stroke-linejoin="round"></path>
+						</g>
+					</g>
+				</svg>
+			</div>
+			<div class="detail-info">
+				<div class="detail-label">Электронная почта</div>
+				<div class="detail-value">
+					anton.ionov@aton.ru
+				</div>
+			</div>
+		</a>
 </div> 
   <script>
+	  function openLinkInBrowser(url) {
+
+      if (navigator && navigator.app && navigator.app.loadUrl) {
+          navigator.app.loadUrl(url, { openExternal:true });
+      }
+      else {
+          window.open(url, '_system');
+      }
+    }
         document.getElementById('downloadVCF').addEventListener('click', function() {
             const vcfData = `BEGIN:VCARD
 CHARSET:UTF-8
